@@ -1,25 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useCallback } from "react";
+import { useDispatch } from "react-redux";
+import Layout from "./hoc/Layout/Layout";
+import { Route, Redirect } from "react-router-dom";
+
+import CharactersPage from "./Containers/Characters/Characters";
+import FavoritesPage from "./Containers/Favorites/Favorites";
+import FilmsPage from "./Containers/Films/Films";
+import * as actions from "./store/Actions/App";
+import "./App.css";
 
 function App() {
+  const dispatch = useDispatch();
+  const onStartApp = useCallback(() => dispatch(actions.StartApp()), [
+    dispatch,
+  ]);
+
+  useEffect(() => {
+    onStartApp();
+  }, [onStartApp]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <Route path="/" exact component={FilmsPage} />
+      <Route path="/characters" exact component={CharactersPage} />
+      <Route path="/favorites" exact component={FavoritesPage} />
+      <Redirect to="/" />
+    </Layout>
   );
 }
 

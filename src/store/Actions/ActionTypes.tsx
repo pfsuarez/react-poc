@@ -1,0 +1,6 @@
+
+export const START_APP = "START_APP";
+export const FETCHED_CHARACTERS = "FETCHED_CHARACTERS";
+export const FETCHED_FILMS = "FETCHED_FILMS";
+
+export const FILM_TOGGLE_FAV = "FILM_TOGGLE_FAV";
