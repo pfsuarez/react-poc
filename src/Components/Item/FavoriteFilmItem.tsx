@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { film } from "../../store/Reducers/App";
+import { film } from "../../store/Interfaces/DataTypes";
 import Card from "../Card/Card";
 
 const FavoriteFilmItem = (props: film) => {

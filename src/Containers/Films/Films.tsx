@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
-import { IState, film } from "../../store/Reducers/App";
+import { IState, film } from "../../store/Interfaces/DataTypes";
 import FilmItem from "../../Components/Item/FilmItem";
 import { FilmToggleFav } from "../../store/Actions/App";
 

@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { film, IState } from "../../store/Reducers/App";
+import { film, IState } from "../../store/Interfaces/DataTypes";
 import FavoriteFilmItem from "../../Components/Item/FavoriteFilmItem";
 
 const Favorites = (props: any) => {

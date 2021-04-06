@@ -1,5 +1,5 @@
 import Card from "../Card/Card";
-import { film, character } from "../../store/Reducers/App";
+import { film, character } from "../../store/Interfaces/DataTypes";
 import styled from "styled-components";
 
 interface FilmItemProps extends film {
@@ -8,7 +8,6 @@ interface FilmItemProps extends film {
 
 const FilmItem = (props: FilmItemProps) => {
   
-  
   const Title = styled.h2`
     font-size: 1.15rem;
     margin: 0.25rem 0;
@@ -16,6 +15,10 @@ const FilmItem = (props: FilmItemProps) => {
 
   const P = styled.p`
     margin: 0.25rem 0;
+  `;
+
+  const Button = styled.a`
+  
   `;
 
   return (

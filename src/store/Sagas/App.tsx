@@ -1,7 +1,7 @@
 import { put } from "redux-saga/effects";
 import * as appActions from "../Actions/App";
 import axios from "../../axios";
-import { film } from "../Reducers/App";
+import { film } from "../Interfaces/DataTypes";
 
 export function* StartApp(): any {
   try {

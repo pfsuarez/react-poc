@@ -1,5 +1,5 @@
 import * as actionTypes from "./ActionTypes";
-import { film, character } from "../Reducers/App";
+import { film, character } from "../Interfaces/DataTypes";
 
 export const StartApp = () => {
   return {
